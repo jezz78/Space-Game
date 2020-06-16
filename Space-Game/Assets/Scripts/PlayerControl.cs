@@ -18,6 +18,14 @@ public class PlayerControl : MonoBehaviour
     private float current_Attack_Timer;     //zmienna czasu pomiedzy strzalami
     private bool can_Attack;
 
+    private AudioSource laserAudio;
+
+
+    void Awake()
+    {
+        laserAudio = GetComponent<AudioSource>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +77,8 @@ public class PlayerControl : MonoBehaviour
                 can_Attack = false;
                 attack_Timer = 0f;          //reset zmiennej czasu
                 Instantiate(p_bullet_2, attack_Point.position, Quaternion.identity);
+
+                laserAudio.Play();
             }
             
         }

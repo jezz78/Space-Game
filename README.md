@@ -13,3 +13,6 @@ Credits
 - Master484 - Bullet Collection - https://opengameart.org/content/bullet-collection-1-m484 - license CC0 (Public Domain)
 //- Felis Chaus - explosion (e_explosion) - https://opengameart.org/content/fire-explosion - license CC0 (Public Domain)
 - Cuzco - Explosion (e_explosion_2) - https://opengameart.org/content/explosion - license CC0 (Public Domain)
+- para - Asteroids - https://opengameart.org/content/low-poly-rocks - license CC0 (Public Domain)
+- farfadet46 - Tir laser sound - https://opengameart.org/content/laser-fire-0 - license CC0 (Public Domain)
+- rubberduck - retro_die_03 - https://opengameart.org/content/50-cc0-retro-synth-sfx - license C00 (Public Doman)

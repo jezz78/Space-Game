@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 503999056885487208}
   - component: {fileID: 503999056885487209}
   - component: {fileID: 7475931998206667556}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: enemy_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.084, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 418790533299544173}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -108,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.33, y: 3.18}
+  m_Size: {x: 3.31, y: 3.36}
   m_EdgeRadius: 0
 --- !u!50 &503999056885487213
 Rigidbody2D:
@@ -141,7 +142,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 075cb50dc94b114428744788f68fd99e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -258,10 +259,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7137eff325a90ad418554efe6c9e375d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   rotate_Speed: 50
   canShoot: 1
   canRotate: 0
   bound_X: -11
-  attack_Point: {fileID: 0}
-  e_bulletPrefab: {fileID: 0}
+  attack_Point: {fileID: 418790533299544173}
+  bulletPrefab: {fileID: 9076270063115287968, guid: aeb5231447fc1b848adeb58bbdf0dc8a,
+    type: 3}
+--- !u!1 &8373847182918467243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418790533299544173}
+  m_Layer: 0
+  m_Name: Attack Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &418790533299544173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373847182918467243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 503999056885487214}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

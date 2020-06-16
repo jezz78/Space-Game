@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     public float bound_X = -11f;
 
     public Transform attack_Point;
-    public GameObject e_bulletPrefab;
+    public GameObject bulletPrefab;
 
     private Animator anim;
     private AudioSource explosionSound;
@@ -38,6 +38,9 @@ public class Enemy : MonoBehaviour
                 rotate_Speed *= -1f;
             }
         }
+
+        if (canShoot)
+            Invoke("startShooting", Random.Range(1f, 2f));
     }
     // Update is called once per frame
     void Update()
@@ -64,6 +67,37 @@ public class Enemy : MonoBehaviour
         if (canRotate)
         {
             transform.Rotate(new Vector3(0f, 0f, rotate_Speed * Time.deltaTime), Space.World);
+        }
+    }
+
+    void startShooting()
+    {
+        GameObject e_bullet_2 = Instantiate(bulletPrefab, attack_Point.position, Quaternion.identity);  //(obiekt, pozycja, obrot)
+        e_bullet_2.GetComponent<Bullet>().is_EnemyBullet = true;
+
+        if (canShoot)
+            Invoke("startShooting", Random.Range(1f, 3f));
+    }
+
+    void TurnOffObject()
+    {
+        gameObject.SetActive(false);
+    }
+
+    void OnTriggerEnter2D(Collider2D target)
+    {
+        if(target.tag == "Bullet")
+        {
+            canMove = false;
+            if (canShoot)
+            {
+                canShoot = false;
+                CancelInvoke("startShooting");
+            }
+            Invoke("TurnOffObject", 3f);
+
+            explosionSound.Play();
+            anim.Play("destroy");
         }
     }
 }

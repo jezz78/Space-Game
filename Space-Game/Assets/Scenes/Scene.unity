@@ -409,7 +409,7 @@ PrefabInstance:
     - target: {fileID: 503999056885487214, guid: 5e70368cfed968b41a5ab62665244499,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.24
+      value: 7.07
       objectReference: {fileID: 0}
     - target: {fileID: 503999056885487214, guid: 5e70368cfed968b41a5ab62665244499,
         type: 3}
@@ -465,16 +465,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: enemy_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7475931998206667556, guid: 5e70368cfed968b41a5ab62665244499,
-        type: 3}
-      propertyPath: canShoot
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7475931998206667556, guid: 5e70368cfed968b41a5ab62665244499,
-        type: 3}
-      propertyPath: canMove
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e70368cfed968b41a5ab62665244499, type: 3}

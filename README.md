@@ -11,7 +11,7 @@ Credits
 - Francesco Ungaro - Space photo - https://www.pexels.com/photo/starry-sky-998641/ - license CC0 (Public Domain)
 - SpriteAttack - SpaceShip Construction Kit - https://opengameart.org/content/spaceship-construction-kit - license CC0 (Public Domain)
 - Master484 - Bullet Collection - https://opengameart.org/content/bullet-collection-1-m484 - license CC0 (Public Domain)
-//- Felis Chaus - explosion (e_explosion) - https://opengameart.org/content/fire-explosion - license CC0 (Public Domain)
+- Felis Chaus - explosion (e_explosion) - https://opengameart.org/content/fire-explosion - license CC0 (Public Domain)
 - Cuzco - Explosion (e_explosion_2) - https://opengameart.org/content/explosion - license CC0 (Public Domain)
 - para - Asteroids - https://opengameart.org/content/low-poly-rocks - license CC0 (Public Domain)
 - farfadet46 - Tir laser sound - https://opengameart.org/content/laser-fire-0 - license CC0 (Public Domain)

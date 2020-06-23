@@ -94,7 +94,7 @@ public class Enemy : MonoBehaviour
                 canShoot = false;
                 CancelInvoke("startShooting");
             }
-            Invoke("TurnOffObject", 3f);
+            Invoke("TurnOffObject", 0.4f); //czas w jakim obiekt pozostaje widoczny po turnoff
 
             explosionSound.Play();
             anim.Play("destroy");

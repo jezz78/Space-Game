@@ -7,12 +7,11 @@ public class PlayerControl : MonoBehaviour
 
     public float speed = 5f;
     public float min_Y, max_Y;
+    public GameObject explode;
 
-    [SerializeField]
-    private GameObject p_bullet_2;
+    [SerializeField] private GameObject p_bullet_2;
 
-    [SerializeField]
-    private Transform attack_Point;
+    [SerializeField] private Transform attack_Point;
 
     public float attack_Timer = 0.35f;
     private float current_Attack_Timer;     //zmienna czasu pomiedzy strzalami
@@ -83,4 +82,23 @@ public class PlayerControl : MonoBehaviour
             
         }
     }
+
+    /*void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag.Equals("Bullet"))
+        {
+            //gameObject.SetActive(false);
+            Debug.Log("hit detected");
+        }
+    }
+    */
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Bullet"))
+        {
+            gameObject.SetActive(false);
+            Debug.Log("hit detected");
+        }
+    }
+
 }

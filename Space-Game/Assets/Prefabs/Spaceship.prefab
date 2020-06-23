@@ -165,6 +165,7 @@ MonoBehaviour:
   speed: 5
   min_Y: -4.6
   max_Y: 4.6
+  explode: {fileID: 0}
   p_bullet_2: {fileID: 4758639064495939768, guid: 3140a0118d60f7a47a86db7b383adb3c,
     type: 3}
   attack_Point: {fileID: 2589242245500744035}

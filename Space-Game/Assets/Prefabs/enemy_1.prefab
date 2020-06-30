@@ -95,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -267,6 +267,7 @@ MonoBehaviour:
   attack_Point: {fileID: 418790533299544173}
   bulletPrefab: {fileID: 9076270063115287968, guid: aeb5231447fc1b848adeb58bbdf0dc8a,
     type: 3}
+  PointsWhenIDie: 2
 --- !u!1 &8373847182918467243
 GameObject:
   m_ObjectHideFlags: 0

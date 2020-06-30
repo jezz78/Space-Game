@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     {
         if (is_EnemyBullet)
             speed *= -1;    //bo musi lecieć w przeciwnym kierunku do naszego ruchu
-        Invoke("DeactivateGameObject", deactivate_Timer);       //wylaczenie strzalu
+        Invoke("DeactivateGameObject", deactivate_Timer);       //wylaczenie strzalu zeby nie przepelnic pamieci
     }
 
     // Update is called once per frame

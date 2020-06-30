@@ -20,7 +20,8 @@ public class Enemy : MonoBehaviour
     private Animator anim;
     private AudioSource explosionSound;
 
-    
+    public int PointsWhenIDie;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -95,6 +96,7 @@ public class Enemy : MonoBehaviour
                 CancelInvoke("startShooting");
             }
             Invoke("TurnOffObject", 0.4f); //czas w jakim obiekt pozostaje widoczny po turnoff
+            PointsManager.points = PointsManager.points + PointsWhenIDie;
 
             explosionSound.Play();
             anim.Play("destroy");

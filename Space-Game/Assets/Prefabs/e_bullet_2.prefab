@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3481771447241317006}
   - component: {fileID: 507545602352363218}
   - component: {fileID: 8831363472755819900}
-  - component: {fileID: 114148782946160682}
   m_Layer: 8
   m_Name: e_bullet_2
   m_TagString: Bullet
@@ -145,16 +144,3 @@ MonoBehaviour:
   speed: 5
   deactivate_Timer: 4
   is_EnemyBullet: 0
---- !u!114 &114148782946160682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9076270063115287968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a95a5cf1a5c3c81469f00bf78ddee3cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Points_text: {fileID: 0}

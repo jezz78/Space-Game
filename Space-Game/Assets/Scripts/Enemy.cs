@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
                 canShoot = false;
                 CancelInvoke("startShooting");
             }
-            PointsManager.points += PointsManager.points + PointsWhenIDie;
+            PointsManager.points = PointsManager.points + PointsWhenIDie;
 
             Invoke("TurnOffObject", 0.4f); //czas w jakim obiekt pozostaje widoczny po turnoff
             explosionSound.Play();

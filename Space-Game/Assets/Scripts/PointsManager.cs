@@ -21,7 +21,7 @@ public class PointsManager : MonoBehaviour
     {
         AddPoints();
     }
-
+    
     void AddPoints()
     {
         Points_text.text = points.ToString("F0");

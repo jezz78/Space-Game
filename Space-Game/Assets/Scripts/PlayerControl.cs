@@ -48,46 +48,11 @@ public class PlayerControl : MonoBehaviour
 
     void MovePlayer()
     {
-        if(Input.GetAxisRaw("Vertical") > 0f)
-        {
-            Vector3 temp = transform.position;
-            temp.y += speed * Time.deltaTime;
-
-            if (temp.y > max_Y)
-                temp.y = max_Y;
-
-            transform.position = temp;
-        }
-        else if (Input.GetAxisRaw("Vertical") < 0f)
-        {
-            Vector3 temp = transform.position;
-            temp.y -= speed * Time.deltaTime;
-
-            if (temp.y < min_Y)
-                temp.y = min_Y;
-
-            transform.position = temp;
-        }
-        else if (Input.GetAxisRaw("Horizontal") > 0f)
-        {
-            Vector3 temp = transform.position;
-            temp.x += speed * Time.deltaTime;
-
-            if (temp.x > max_X)
-                temp.x = max_X;
-
-            transform.position = temp;
-        }
-        else if (Input.GetAxisRaw("Horizontal") < 0f)
-        {
-            Vector3 temp = transform.position;
-            temp.x -= speed * Time.deltaTime;
-
-            if (temp.x < min_X)
-                temp.x = min_X;
-
-            transform.position = temp;
-        }
+        Vector3 temp = transform.position;
+        temp += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * speed * Time.deltaTime;
+        temp.x = Mathf.Clamp(temp.x, min_X, max_X);
+        temp.y = Mathf.Clamp(temp.y, min_Y, max_Y);
+        transform.position = temp;
     }
 
     void Attack()
@@ -127,7 +92,7 @@ public class PlayerControl : MonoBehaviour
             restartButton.SetActive(true);
             //Debug.Log("hit detected");
         }
-        else if (hit.gameObject.tag.Equals("Enemy"))
+        if (hit.gameObject.tag.Equals("Enemy"))
         {
             Invoke("TurnOffObject", 0.8f);
             explosionSound.Play();
